@@ -1,0 +1,184 @@
+.portfolio {
+  background: linear-gradient(135deg, rgba(24, 24, 24, 1) 0%, rgba(15, 15, 15, 1) 100%);
+  color: #f5f5f5; /* Light text color for dark theme */
+}
+
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #f5f5f5; /* Light color for filter text */
+  transition: all 0.3s;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px; /* Add some padding for a better look */
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: linear-gradient(135deg, rgba(243, 172, 18, 1) 20%, rgba(241, 196, 15, 1) 100%); /* Gradient background */
+  color: #000; /* Dark text for contrast */
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+  border-radius: 15px; /* Rounded corners for outer box */
+  position: relative; /* Position relative for absolute child positioning */
+}
+
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden; /* Ensure the image fits within the border-radius */
+  border-top-left-radius: 15px; /* Adjusted border radius to match outer box */
+  border-top-right-radius: 15px; /* Adjusted border radius to match outer box */
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.6s;
+  width: 100%; /* Ensure the image fills the container */
+  border-radius: 15px; /* Make image corners match the container */
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  left: 15px;
+  bottom: 0;
+  z-index: 3;
+  right: 15px;
+  transition: all 0.3s;
+  background: linear-gradient(
+    58deg,
+    rgba(243, 172, 18, 1) 20%,
+    rgba(241, 196, 15, 1) 100%
+  );
+  padding: 10px 15px;
+  border-bottom-left-radius: 15px; /* Match the outer box border radius */
+  border-bottom-right-radius: 15px; /* Match the outer box border radius */
+  filter: drop-shadow(0 4px 15px rgba(243, 172, 18, 0.7)); /* Yellow gradient drop shadow */
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.portfolio .section-title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(243, 172, 18, 1) 20%, rgba(241, 196, 15, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for browsers not supporting the gradient */
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #47b2e4; /* Highlight color for hover */
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.15);
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #d4e447;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #c3db24;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(226, 229, 36, 0.71);
+  background: rgba(24, 24, 24, 0.9); /* Slightly transparent dark background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  color: #f5f5f5; /* Light color for heading */
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f5f5f5; /* Light color for description heading */
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+  color: #bfbfbf; /* Subtle color for description text */
+}

@@ -1,0 +1,167 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  width: 40px; /* Adjust as needed */
+  height: auto;
+  margin-right: 8px; /* Adjust spacing between image and text */
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(24, 24, 24, 0.9) !important;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff !important;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: inline-block;
+  padding: 10px 0; /* Top and bottom padding */
+  font-size: 14px;
+  font-weight: 500;
+  color: #f3ac12 !important;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative; /* Required for the underline effect */
+  margin: 0 20px; /* Spacing between links */
+  line-height: 1; /* Adjust line-height to control height */
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Adjust based on text positioning */
+  width: 100%; /* Set to 100% for full text width */
+  height: 2px; /* Thickness of the underline */
+  background: linear-gradient(
+    58deg,
+    rgba(243, 172, 18, 1) 20%,
+    rgba(241, 196, 15, 1) 100%
+  );
+  transform: scaleX(0); /* Initially hide the underline */
+  transition: transform 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1); /* Show underline on hover */
+  width: 100%; /* Ensure the underline spans the text width */
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation 
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+  color: #fff !important;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .navbar .getstarted,
+  .navbar .getstarted:focus {
+    margin: 15px;
+    border: 2px solid #47b2e4 !important;
+    color: #37517e !important;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #181818;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff !important;
+    overflow-y: auto;
+  }
+
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    color: #37517e !important;
+  }
+
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover > a {
+    color: #47b2e4 !important;
+  }
+}
+
+i.bi.mobile-nav-toggle.bi-x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
