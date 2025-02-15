@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import 'aos/dist/aos.css';
-import Header from './Components/Nav.jsx';
-import Banner from './Components/Banner.jsx';
-import Services from './Components/Services.jsx';
-import Portfolio from './Components/Templates.jsx';
-import Pricing from './Components/Pricing.jsx';
-import Contact from './Components/Contact.jsx';
-import Footer from './Components/Footer.jsx';
+import Header from './components/Nav.jsx';
+import Banner from './components/Banner.jsx';
+import Services from './components/Services.jsx';
+import Portfolio from './components/Templates.jsx';
+import Pricing from './components/Pricing.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
